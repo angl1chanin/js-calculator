@@ -5,11 +5,7 @@ const ACTIVE_THEME = localStorage.getItem('theme');
 let switcher = document.getElementById('checkbox');
 
 switcher.addEventListener('click', () => {
-    if (switcher.checked) {
-        switchTheme(THEME_DARK_PATH);
-    } else {
-        switchTheme(THEME_LIGHT_PATH);
-    }
+    switcher.checked ? switchTheme(THEME_DARK_PATH) : switchTheme(THEME_LIGHT_PATH);
 })
 
 let switchTheme = (themeModePath) => {
@@ -17,11 +13,8 @@ let switchTheme = (themeModePath) => {
     localStorage.setItem('theme',themeModePath);
 };
 
-if (ACTIVE_THEME === null) {
-    switchTheme(THEME_LIGHT_PATH);
-} else {
-    switchTheme(ACTIVE_THEME);
-    if (ACTIVE_THEME === THEME_DARK_PATH) {
-        document.getElementById('checkbox').click();
-    }
+ACTIVE_THEME === null ? switchTheme(THEME_LIGHT_PATH) : switchTheme(ACTIVE_THEME);
+
+if (ACTIVE_THEME === THEME_DARK_PATH) {
+    document.getElementById('checkbox').click();
 }
