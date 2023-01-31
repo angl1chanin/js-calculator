@@ -1,0 +1,52 @@
+body {
+  background: var(--dark-body-bg-color);
+  color: var(--dark-body-text-color);
+}
+
+.calc {
+  &__wrapper {
+    background: var(--dark-calc-wrapper-bg-color);
+  }
+
+  &__expression {
+    color: var(--dark-calc-expression-text-color);
+  }
+
+  &__result {
+    color: var(--dark-calc-result-text-color);
+  }
+
+  &__btn {
+    color: var(--dark-calc-btn-color);
+    background-color: var(--dark-calc-btn-bg-color);
+    box-shadow: var(--dark-calc-btn-box-shadow);
+
+    &:hover {
+      box-shadow: var(--dark-calc-btn-hover-box-shadow);
+    }
+
+    &_active {
+      background-color: var(--dark-calc-btn-bg-color-active) !important;
+    }
+
+    &_operation {
+      background-color: var(--dark-calc-operation-btn-bg-color);
+      color: var(--dark-calc-operation-btn-text-color);
+    }
+
+    &_clear {
+      background-color: var(--dark-calc-clear-btn-bg-color);
+      color: var(--dark-calc-clear-btn-text-color);
+    }
+
+    &_delete {
+      background-color: var(--dark-calc-delete-btn-bg-color);
+      color: var(--dark-calc-delete-btn-text-color);
+    }
+
+    &_equal {
+      background-color: var(--dark-calc-equal-btn-bg-color);
+      color: var(--dark-calc-equal-btn-text-color);
+    }
+  }
+}

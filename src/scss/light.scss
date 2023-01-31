@@ -1,0 +1,50 @@
+body {
+  background: var(--body-bg-color);
+  color: var(--body-text-color);
+}
+
+.calc {
+  &__wrapper {
+    background: var(--calc-wrapper-bg-color);
+    backdrop-filter: blur(5px);
+  }
+
+  &__expression {
+    color: var(--calc-expression-text-color);
+  }
+
+  &__result {
+    color: var(--calc-result-text-color);
+  }
+
+  &__btn {
+    color: var(--calc-btn-light-color);
+    background-color: var(--calc-btn-bg-color);
+    box-shadow: var(--calc-btn-box-shadow);
+
+    &:hover {
+      box-shadow: var(--calc-btn-hover-box-shadow);
+    }
+
+    &_active {
+      background-color: var(--calc-btn-bg-color-active) !important;
+    }
+
+    &_operation {
+      background-color: var(--calc-operation-btn-bg-color);
+      color: var(--calc-operation-btn-text-color);
+    }
+
+    &_clear {
+      color: var(--calc-clear-btn-text-color);
+    }
+
+    &_delete {
+      color: var(--calc-clear-btn-text-color);
+    }
+
+    &_equal {
+      background-color: var(--calc-equal-btn-bg-color);
+    }
+  }
+}
