@@ -108,7 +108,6 @@ function makeOperation(operation) {
             LAST_OPERATION = operation;
             break;
         case '*':
-            // if value is zero we need to make it another from zero for multiply
             VALUE *= getDisplayValue();
             displayClear();
             LAST_OPERATION = operation;
@@ -117,8 +116,6 @@ function makeOperation(operation) {
             if (getDisplayValue() === 0) {
                 ZERO_DIVISION = true;
                 break;
-            } else if (VALUE === 0) {
-                VALUE = getDisplayValue();
             } else {
                 VALUE /= getDisplayValue();
             }
@@ -143,8 +140,7 @@ function updateDisplay(btnValue) {
     else if (btnValue !== '0' && calcDisplay.innerHTML === '0') {
         calcDisplay.innerHTML = '';
         calcDisplay.innerHTML += btnValue;
-    }
-    else {
+    } else {
         calcDisplay.innerHTML += btnValue;
     }
 }
@@ -165,12 +161,17 @@ calcBtns.forEach(btn => {
                 break;
             case isOperation(btnValue):
                 btn.classList.toggle('calc__btn_active');
+
+                // clear display and save operation for the next value
                 if (LAST_OPERATION === "=") {
                     calcEqualBtn.classList.toggle('calc__btn_active');
                     displayClear();
                     LAST_OPERATION = btnValue;
                     break;
                 }
+
+                // if it's first operation we have to set value to display value, otherwise will happen next:
+                // first value = 8, operation = -, second value = 3, result = 0-8-3 = -11
                 if (IS_FIRST_OPERATION) {
                     VALUE = getDisplayValue();
                     displayClear();
