@@ -48,3 +48,19 @@ body {
     }
   }
 }
+
+.language-picker {
+  &__btn {
+    background-color: var(--lp-btn-bg-color);
+  }
+
+  &__content {
+    background-color: var(--lp-content-bg-color);
+  }
+
+  &__option {
+    &:hover {
+      background-color: var(--lp-option-hover-bg-color);
+    }
+  }
+}

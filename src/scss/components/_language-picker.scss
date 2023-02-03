@@ -1,0 +1,59 @@
+$wrapper-border-radius: 0.5rem;
+
+.language-picker {
+  position: relative;
+  width: 6rem;
+
+  .active &__content {
+    display: block;
+  }
+
+  .active &__btn svg {
+    transform: rotate(-180deg);
+  }
+
+  &__btn {
+    padding: 0.3rem 1rem;
+    border-radius: $wrapper-border-radius;
+    user-select: none;
+
+    svg {
+      transition: .2s transform linear;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    position: absolute;
+    width: 100%;
+    top: 3rem;
+
+    padding: 1rem;
+    border-radius: $wrapper-border-radius;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  &__option {
+    padding: 0.1rem 0.3rem;
+    border-radius: $wrapper-border-radius;
+    transition: .1s background-color linear, .1s color linear;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

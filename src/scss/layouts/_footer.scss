@@ -1,0 +1,29 @@
+.footer {
+  background-color: var(--footer-bg);
+  padding: 2rem 0;
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__social-item {
+    font-size: 1.8rem;
+
+    svg {
+      font-size: 2rem;
+      color: white;
+      transition: .3s color linear;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,4 +1,9 @@
 node_modules
 package-lock.json
 .idea
-dist/*
+dist
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/

@@ -50,3 +50,22 @@ body {
     }
   }
 }
+
+.language-picker {
+  &__btn {
+    background-color: var(--dark-lp-btn-bg-color);
+    color: var(--dark-lp-btn-text-color);
+  }
+
+  &__content {
+    background-color: var(--dark-lp-content-bg-color);
+  }
+
+  &__option {
+    color: var(--dark-lp-option-text-color);
+    &:hover {
+      background-color: var(--dark-lp-option-hover-bg-color);
+      color: var(--dark-lp-option-hover-text-color);
+    }
+  }
+}

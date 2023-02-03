@@ -7,6 +7,9 @@
   // header
   --header-bg: #8dc0fd;
 
+  // footer
+  --footer-bg: #8dc0fd;
+
   // calc
   --calc-expression-text-color: #ffffff;
   --calc-result-text-color: #37434F;
@@ -31,7 +34,7 @@
   // header
   --dark-header-bg: #1c1a1a;
 
-  // calc
+  // calc dark
   --dark-calc-expression-text-color: #5F6468;
   --dark-calc-result-text-color: #FFFFFF;
   --dark-calc-wrapper-bg-color: #131D27;
@@ -50,4 +53,19 @@
   --dark-calc-clear-btn-text-color: #a1a0a0;
   --dark-calc-delete-btn-bg-color: #757575;
   --dark-calc-delete-btn-text-color: #a1a0a0;
+
+  // language picker
+
+  // light
+  --lp-btn-bg-color: #fff;
+  --lp-content-bg-color: #fff;
+  --lp-option-hover-bg-color: #c5c5c5;
+
+  // dark
+  --dark-lp-btn-text-color: #fff;
+  --dark-lp-option-text-color: #fff;
+  --dark-lp-option-hover-text-color: #37434F;
+  --dark-lp-btn-bg-color: #37434F;
+  --dark-lp-content-bg-color: #37434F;
+  --dark-lp-option-hover-bg-color: #fff;
 }
